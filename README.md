@@ -11,7 +11,7 @@ I'm always open to discussions, collaborations, and opportunities. Feel free to 
 
 ## License
 
-This project is open-source and available under the [MIT License](https://opensource.org/licenses/MIT).
+This project is available under the [The Creative Commons Attribution-NonCommercial (CC BY-NC)](https://creativecommons.org/licenses/by-nc/4.0/).
 
 ---
 
