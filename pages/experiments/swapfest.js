@@ -1,6 +1,6 @@
 import Head from 'next/head';
-import Layout from '../components/Layout';
-import PageHeader from "../components/Typography/PageHeader";
+import Layout from 'components/Layout';
+import PageHeader from "components/Typography/PageHeader";
 
 export default function Bio() {
 
