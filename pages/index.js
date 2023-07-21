@@ -8,6 +8,7 @@ import * as React from "react";
 import PageHeader from "../components/Typography/PageHeader";
 import Paragraph from "../components/Typography/Paragraph";
 import ContentWithPic from "../components/Section/ContentWithPic";
+import EmojiPeopleIcon from '@mui/icons-material/EmojiPeople';
 
 export default function Home() {
     return (
@@ -15,10 +16,10 @@ export default function Home() {
             <Head>
                 <title>Pragmatic Dev</title>
             </Head>
-            <PageHeader>Steve Lewis' Dev Site</PageHeader>
+            <PageHeader>I'm Steve Lewis <EmojiPeopleIcon/> </PageHeader>
             <ContentWithPic picSrc="/photos/me-2023-sq.jpg" picAlt="Steve Lewis Photo">
                 <Paragraph>
-                    Welcome to my Website. Here you will find a few simple pages where I can post my CV, experiments and thoughts on development.
+                    Welcome to my Website! Here you will find a few simple pages where I can post my CV, experiments and thoughts.
                 </Paragraph>
                 <Paragraph>
                     I'm a contract software developer based in <b>Yorkshire, England</b> (near Leeds).
@@ -33,7 +34,7 @@ export default function Home() {
                     Outside the world of software development, I love mountain biking, snowboarding, and most other sports.
                 </Paragraph>
                 <Paragraph>
-                    You can find our more about me and the technologies I work with <Typography href="/bio" component={Link}>here</Typography>.
+                    You can find out more about me and the technologies I work with <Typography href="/bio" component={Link}>here</Typography>.
                 </Paragraph>
             </ContentWithPic>
             <Box sx={{display: 'flex', gap: 4, marginTop: 5}}>

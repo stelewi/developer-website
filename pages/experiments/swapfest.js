@@ -2,14 +2,14 @@ import Head from 'next/head';
 import Layout from 'components/Layout';
 import PageHeader from "components/Typography/PageHeader";
 
-export default function Bio() {
+export default function Swapfest() {
 
     return (
         <Layout>
             <Head>
-                <title>About Me</title>
+                <title>Swapfest - A MMO Card Game</title>
             </Head>
-            <PageHeader>About Me</PageHeader>
+            <PageHeader>Swapfest</PageHeader>
         </Layout>
     );
 }
