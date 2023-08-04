@@ -11,6 +11,7 @@ import MenuItem from '@mui/material/MenuItem';
 import CodeIcon from '@mui/icons-material/Code';
 import Link from "next/link";
 import ButtonLink from "../Buttons/ButtonLink";
+import UserMenu from "./UserMenu";
 
 const pages = [
     {
@@ -140,6 +141,11 @@ function Navbar() {
                                 onClick={handleCloseNavMenu}
                             />
                         ))}
+                    </Box>
+
+                    {/* all devices show user/avatar menu on right */}
+                    <Box sx={{ flexGrow: 0 }}>
+                        <UserMenu/>
                     </Box>
                 </Toolbar>
             </Container>

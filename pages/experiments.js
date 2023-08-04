@@ -23,7 +23,7 @@ export default function Bio() {
 
             <SectionHeader>Swapfest! An MMO Card Game</SectionHeader>
             <Paragraph>
-                What developer doesn't like writing games? This is my first real experiment, and one of the reasons I built this site. Swapfest is a Web-based MMO card game. You can play the game here. Find out more about the tech involved in writing this game, and see the code here.
+                What developer doesn't like writing games? This is my first real experiment, and one of the reasons I built this site. Swapfest is a Web-based MMO card game. You can play the game <Link href="/experiments/swapfest">here</Link>. Find out more about the tech involved in writing this game, and see the code here.
             </Paragraph>
             <Paragraph>
                 In brief, the game uses the following components:
@@ -38,7 +38,7 @@ export default function Bio() {
                 I wrote this site to give me a presence on the web, and to allow me to demo code, but it also gives me the opportunity to learn <Typography fontWeight="bold" component={Link} href="https://nextjs.org/">Next.js</Typography>. I was already pretty familiar with <Typography fontWeight="bold" component={Link} href="https://react.dev/">React.js</Typography> but I wanted to learn something new, and get all the SEO and performance benefits of Next.js.
             </Paragraph>
             <Paragraph>
-                Dynamic parts of this site are driven by data from a backend API written from scratch in PHP Symfony, and API Platform
+                Dynamic parts of this site are driven by data from a backend API written from scratch in PHP Symfony, and API Platform.
             </Paragraph>
 
         </Layout>
