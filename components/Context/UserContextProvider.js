@@ -5,7 +5,6 @@ import isServer from "src/utils/isServer";
 export const UserContext = createContext();
 
 const UserContextProvider = (props) => {
-    // note, refresh token is stored in an httpOnly cookie, and the jwtToken is very short-lived
     const [ user, setUser ] = useState(null);
 
     const loginAsAnonymousUser = () => {

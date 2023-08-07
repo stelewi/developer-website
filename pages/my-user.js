@@ -22,10 +22,7 @@ export default function Bio() {
         if(user) {
 
             try {
-                const data = await apiResourceRequest('/users/' + user.id, 'GET', jwtToken);
-
-                console.log(data);
-
+                const user = await apiResourceRequest('/me');
 
                 updatedTableData.push({ name: "ID", value: user.id });
                 updatedTableData.push({ name: "Type", value: user.isAnonymous ? "Anonymous" : "Full User" });

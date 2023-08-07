@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const baseURL = process.env.NEXT_PUBLIC_API_BASE_URL;
+const baseURL = process.env.NEXT_PUBLIC_API_BASE_URL ?? null;
 
 const getJwtToken = () => localStorage.getItem('jwtToken')
 const setJwtToken = (jwtToken) => localStorage.setItem('jwtToken', jwtToken)
