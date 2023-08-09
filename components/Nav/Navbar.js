@@ -26,10 +26,14 @@ const pages = [
         title: "Contact",
         href: "/contact"
     },
+    {
+        title: "Swapfest (a multiplayer card swapping game)",
+        href: "/swapfest-game"
+    },
 ];
 
-function Navbar() {
-    const barTitle = "Pragmatic Dev"
+function Navbar({ barTitle = "Pragmatic Dev", forceCompactLayout = false }) {
+
     const [anchorElNav, setAnchorElNav] = React.useState(null);
 
     const handleOpenNavMenu = (event) => {
@@ -40,12 +44,30 @@ function Navbar() {
         setAnchorElNav(null);
     };
 
+    const displaySmall = (val = 'flex') => {
+
+        if(forceCompactLayout) {
+            return { xs: val, md: val };
+        }
+
+        return { xs: val, md: 'none' };
+    }
+
+    const displayLarge = (val = 'flex') => {
+
+        if(forceCompactLayout) {
+            return { xs: 'none', md: 'none' };
+        }
+
+        return { xs: 'none', md: val };
+    }
+
     return (
         <AppBar position="static" color="secondary">
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
                     {/* larger devices show icon/title left */}
-                    <CodeIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
+                    <CodeIcon sx={{ display: displayLarge(), mr: 1 }} />
                     <Typography
                         variant="h6"
                         noWrap
@@ -53,7 +75,7 @@ function Navbar() {
                         href="/"
                         sx={{
                             mr: 4,
-                            display: { xs: 'none', md: 'flex' },
+                            display: displayLarge(),
                             fontFamily: 'Roboto Slab',
                             color: 'inherit',
                             textDecoration: 'none',
@@ -63,7 +85,7 @@ function Navbar() {
                     </Typography>
 
                     {/* smaller devices use burger menu left */}
-                    <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+                    <Box sx={{ flexGrow: 1, display: displaySmall() }}>
                         <IconButton
                             size="large"
                             aria-label="account of current user"
@@ -89,7 +111,7 @@ function Navbar() {
                             open={Boolean(anchorElNav)}
                             onClose={handleCloseNavMenu}
                             sx={{
-                                display: { xs: 'block', md: 'none' },
+                                display: displaySmall('block'),
                             }}
                         >
                             {pages.map((page) => (
@@ -113,7 +135,7 @@ function Navbar() {
                     </Box>
 
                     {/* smaller devices show icon/title center */}
-                    <CodeIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
+                    <CodeIcon sx={{ display: displaySmall(), mr: 1 }} />
                     <Typography
                         variant="h5"
                         noWrap
@@ -121,7 +143,7 @@ function Navbar() {
                         href="/"
                         sx={{
                             mr: 2,
-                            display: { xs: 'flex', md: 'none' },
+                            display: displaySmall(),
                             flexGrow: 1,
                             fontFamily: 'Roboto Slab',
                             color: 'inherit',
@@ -132,7 +154,7 @@ function Navbar() {
                     </Typography>
 
                     {/* larger devices show menu items in bar */}
-                    <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, gap: 2 }}>
+                    <Box sx={{ flexGrow: 1, display: displayLarge(), gap: 2 }}>
                         {pages.map((page) => (
                             <ButtonLink
                                 key={page.title}

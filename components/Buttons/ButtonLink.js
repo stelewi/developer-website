@@ -12,7 +12,7 @@ function ButtonLink({ title, href, onClick }) {
         >
             <Button
                 onClick={onClick}
-                sx={{ my: 2, color: 'white', display: 'block' }}
+                sx={{ my: 2, color: 'white', display: 'block', ":hover": { bgcolor: "#157068"} }}
             >
                 {title}
             </Button>
